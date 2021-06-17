@@ -77,9 +77,9 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', getenv('WP_DEBUG') );
 
-define('FORCE_SSL_ADMIN', true);
+define( 'FORCE_SSL_ADMIN', getenv('FORCE_SSL_ADMIN') );
 define( 'WP_CACHE', true );
 define( 'DISABLE_WP_CRON', true );
 define( 'WP_HTTP_BLOCK_EXTERNAL', true );
