@@ -80,6 +80,10 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', getenv('WP_DEBUG') );
 
 define( 'FORCE_SSL_ADMIN', getenv('FORCE_SSL_ADMIN') );
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false){
+	$_SERVER['HTTPS']='on';
+}
+
 define( 'WP_CACHE', true );
 define( 'DISABLE_WP_CRON', true );
 define( 'WP_HTTP_BLOCK_EXTERNAL', true );
