@@ -77,9 +77,9 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', getenv('WP_DEBUG') );
-define( 'WP_DEBUG_LOG', getenv('WP_DEBUG_LOG') );
-define( 'WP_DEBUG_DISPLAY', getenv('WP_DEBUG_DISPLAY') );
+define( 'WP_DEBUG', false );
+define( 'WP_DEBUG_LOG', false );
+define( 'WP_DEBUG_DISPLAY', false );
 
 define( 'FORCE_SSL_ADMIN', getenv('FORCE_SSL_ADMIN') );
 if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false){
