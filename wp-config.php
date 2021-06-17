@@ -20,22 +20,22 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+define( 'DB_NAME', $_ENV[`DB_NAME`] );
 
 /** MySQL database username */
-define( 'DB_USER', 'username_here' );
+define( 'DB_USER', $_ENV[`DB_USER`] );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+define( 'DB_PASSWORD', $_ENV[`DB_PASSWORD`] );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', $_ENV[`DB_HOST`] );
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', $_ENV[`DB_CHARSET`] );
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define( 'DB_COLLATE', $_ENV[`DB_COLLATE`] );
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -78,6 +78,13 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+
+define('FORCE_SSL_ADMIN', true);
+define( 'WP_CACHE', true );
+define( 'DISABLE_WP_CRON', true );
+define( 'WP_HTTP_BLOCK_EXTERNAL', true );
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+
 
 /* That's all, stop editing! Happy publishing. */
 
