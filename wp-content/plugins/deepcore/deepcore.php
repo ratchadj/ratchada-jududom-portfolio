@@ -52,10 +52,12 @@ if ( $the_theme == 'deep-light' || $the_theme == 'deep' || $the_theme == 'deep-m
 	}
 } else {
 	if ( ! defined( 'DEEP_DIR' ) ) {
-		define( 'DEEP_DIR', get_template_directory() . '/' );
+		$url = set_url_scheme( get_template_directory(), 'https' );
+		define( 'DEEP_DIR',  $url . '/' );
 	}
 	if ( ! defined( 'DEEP_URL' ) ) {
-		define( 'DEEP_URL', get_template_directory_uri() );
+		$url = set_url_scheme( get_template_directory_uri(), 'https' );
+		define( 'DEEP_URL', $url );
 	}
 	if ( ! defined( 'DEEP_ASSETS_URL' ) ) {
 		define( 'DEEP_ASSETS_URL', DEEP_URL . '/assets/dist/' );
