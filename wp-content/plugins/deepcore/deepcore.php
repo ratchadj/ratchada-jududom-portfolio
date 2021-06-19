@@ -40,7 +40,8 @@ if ( $the_theme == 'deep-light' || $the_theme == 'deep' || $the_theme == 'deep-m
 		define( 'DEEP_DIR', plugin_dir_path( __FILE__ ) );
 	}
 	if ( ! defined( 'DEEP_URL' ) ) {
-		define( 'DEEP_URL', plugin_dir_url( __FILE__ ) );
+		$url = set_url_scheme( plugin_dir_url( __FILE__ ), 'https' );
+		define( 'DEEP_URL',  $url);
 	}
 	if ( ! defined( 'DEEP_ASSETS_URL' ) ) {
 		define( 'DEEP_ASSETS_URL', DEEP_URL . 'assets/dist/' );
