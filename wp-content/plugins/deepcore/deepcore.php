@@ -37,7 +37,8 @@ if ( $the_theme != 'deep-light' && $the_theme != 'deep-free' && $the_theme != 'd
 // Define directories
 if ( $the_theme == 'deep-light' || $the_theme == 'deep' || $the_theme == 'deep-modern-business' || $the_theme == 'deep-crypto' ) {
 	if ( ! defined( 'DEEP_DIR' ) ) {
-		define( 'DEEP_DIR', plugin_dir_path( __FILE__ ) );
+		$url = set_url_scheme( plugin_dir_path( __FILE__ ), 'https' );
+		define( 'DEEP_DIR',  $url);
 	}
 	if ( ! defined( 'DEEP_URL' ) ) {
 		$url = set_url_scheme( plugin_dir_url( __FILE__ ), 'https' );
